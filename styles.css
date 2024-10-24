@@ -1,11 +1,12 @@
 /* Base Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
+    margin: 1;
     padding: 0;
-    background-color: #000000;
+    background-color: #ffffff;
     color: #222;
     scroll-behavior: smooth;
+    max-height: 0px;
 }
 
 header {
@@ -68,7 +69,7 @@ nav ul li a:hover {
 /* Adjusted Hero Section */
 #hero {
     height: 100vh;
-    background: url('monochrome-hero.jpg') no-repeat center center/cover;
+    background-color: #000;
     position: relative;
     padding-top: 100px; /* Ensures the content starts right below the header */
     display: flex;
@@ -76,6 +77,8 @@ nav ul li a:hover {
     align-items: flex-start; /* Align content to the top */
     color: white;
     overflow: hidden;
+    margin: 0;
+    height: 700px;
 }
 
 /* Hero Content */
@@ -94,6 +97,7 @@ nav ul li a:hover {
     height: auto;
     margin: 0 auto; /* Center the logo */
     margin-right: 100px;
+    margin-top: 75px;
 }
 
 /* Typing effect */
@@ -144,4 +148,57 @@ nav ul li a:hover {
     border-radius: 50%;
     z-index: 0;
     animation: ripple 0.6s linear;
+}
+
+/* Curriculum Section */
+#curriculum {
+    background-color: #fff;
+    color: #111;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.curriculum-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.curriculum-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.curriculum-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.curriculum-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.curriculum-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.curriculum-card:hover {
+    transform: translateY(-10px);
+}
+
+.curriculum-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.curriculum-card p {
+    font-size: 1rem;
+    color: #555;
 }
