@@ -69,7 +69,7 @@ window.addEventListener("scroll", function() {
 setInterval(showNextTestimonial, 4000); // Changes testimonial every 4 seconds
 
 document.addEventListener("DOMContentLoaded", function() {
-    const textArray = ["Empowering Youth Through Financial Literacy"];
+    const textArray = ["Finance Fluent"];
     const typingSpeed = 100; // Speed of typing
     const delayBetweenPhrases = 1000; // Delay between repeating the phrase
 

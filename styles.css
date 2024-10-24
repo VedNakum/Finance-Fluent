@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #000000;
     color: #222;
     scroll-behavior: smooth;
 }
@@ -58,37 +58,6 @@ nav ul li a:hover {
     color: #bbb;
 }
 
-/* Hero Section */
-#hero {
-    height: 100vh;
-    background: url('monochrome-hero.jpg') no-repeat center center/cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-#hero .hero-content {
-    text-align: center;
-    animation: fadeIn 2s ease-out;
-}
-
-.cta-button {
-    background-color: white;
-    color: black;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid #222;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #222;
-    color: white;
-}
-
 /* Black and White Theme for Sections */
 #about, #programs, #faq, #testimonials {
     background-color: #fff;
@@ -96,202 +65,35 @@ nav ul li a:hover {
     padding: 60px 20px;
     text-align: center;
 }
-
-/* Rest of your styles (accordion, testimonials, etc.) remain the same */
-
-/* Shrinking Header on Scroll
-
-/* Hero Section (Parallax) */
-#hero {
-    height: 100vh;
-    background: url('finance-background.jpg') no-repeat center center/cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#hero .hero-content {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    animation: fadeIn 2s ease-out;
-}
-
-.cta-button {
-    background-color: #ffcc00;
-    color: #004080;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #004080;
-    color: rgb(0, 0, 0);
-    transform: scale(1.05);
-}
-
-/* Fade-in Animation */
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.fade-in-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Parallax Section */
-.parallax-section {
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 60px 0;
-    color: rgb(0, 0, 0);
-    text-align: center;
-}
-
-#programs .program-card {
-    margin: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-#programs .program-card:hover {
-    transform: scale(1.05);
-}
-
-/* FAQ Accordion */
-.accordion-item {
-    background-color: rgb(0, 0, 0);
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.accordion-item:hover {
-    background-color: #000000;
-}
-
-.accordion-content {
-    display: none;
-    padding: 10px;
-}
-
-.accordion-item.active .accordion-content {
-    display: block;
-}
-
-/* Testimonials Slider */
-.testimonials-slider {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.testimonial {
-    min-width: 100%;
-    text-align: center;
-    animation: slide 8s infinite;
-}
-
-@keyframes slide {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-100%); }
-    100% { transform: translateX(0); }
-}
-
-/* Scroll Progress Bar */
-/* Scroll Progress Bar (continued) */
-#progressbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 5px;
-    background-color: #ffcc00;
-    z-index: 9999;
-}
-
-#scrollPath {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 9998;
-}
-
-/* Keyframes for the Hero Section */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-50px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Fade-up Animation for Images */
-.fade-up-img {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1.5s ease, transform 1.5s ease;
-}
-
-.fade-up-img.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Footer */
-footer {
-    background-color: #004080;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 30px 0;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-p {
-    color: white;
-}
-
-#about p {
-    color: #000;
-}
-
-.accordion h3 {
-    color: #bbb;
-}
-
-#testimonials p {
-    color: #000;
-}
-
-/* Hero Section */
+/* Adjusted Hero Section */
 #hero {
     height: 100vh;
     background: url('monochrome-hero.jpg') no-repeat center center/cover;
     position: relative;
+    padding-top: 100px; /* Ensures the content starts right below the header */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align content to the top */
     color: white;
     overflow: hidden;
 }
 
+/* Hero Content */
 .hero-content {
-    text-align: center;
+    text-align: left;
     position: relative;
     z-index: 10;
+    margin-left: 100px; /* Adds some space from the header */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+#hero-logo {
+    max-width: 2000px; /* Adjust size to your liking */
+    height: auto;
+    margin: 0 auto; /* Center the logo */
+    margin-right: 100px;
 }
 
 /* Typing effect */
@@ -300,29 +102,22 @@ p {
     font-weight: bold;
     letter-spacing: 2px;
     display: inline-block;
+    color: white; /* Set typed text to white */
+    margin-top: 120px;
 }
 
 .cursor {
     font-weight: 100;
     font-size: 2.5rem;
-    color: #ffcc00;
+    color: white; /* Set the cursor color to match */
     animation: blink 0.7s step-end infinite;
-}
-
-@keyframes blink {
-    from, to {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
 }
 
 /* Button Ripple Effect */
 .cta-button {
     background-color: white;
     color: black;
-    padding: 15px 30px;
+    padding: 15px 45px;
     text-decoration: none;
     border-radius: 5px;
     border: 2px solid #222;
@@ -343,71 +138,10 @@ p {
     left: 50%;
     width: 300%;
     height: 300%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.3);
     transform: translate(-50%, -50%) scale(0);
     transition: 0.6s;
     border-radius: 50%;
     z-index: 0;
     animation: ripple 0.6s linear;
-}
-
-@keyframes ripple {
-    to {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0;
-    }
-}
-
-/* Moving Background Elements */
-.moving-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.moving-bg .circle {
-    position: absolute;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
-    animation: move 10s infinite;
-}
-
-.moving-bg .one {
-    width: 200px;
-    height: 200px;
-    top: 20%;
-    left: 10%;
-    animation-duration: 20s;
-}
-
-.moving-bg .two {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    left: 70%;
-    animation-duration: 15s;
-}
-
-.moving-bg .three {
-    width: 100px;
-    height: 100px;
-    top: 50%;
-    left: 40%;
-    animation-duration: 25s;
-}
-
-@keyframes move {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-    50% {
-        transform: translate(50px, 50px) scale(1.2);
-    }
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
 }
